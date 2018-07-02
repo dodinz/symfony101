@@ -2,10 +2,12 @@
 namespace App\Controller;
 
 use App\Service\Greeting;
-use http\Env\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 class BlogController
 {
@@ -29,6 +31,19 @@ class BlogController
         ]);
 
         return new Response( $html );
+    }
+
+    /**
+    * @Route("/add", name="blog_add")
+     */
+    public function add()
+    {
+
+    }
+
+    public function show()
+    {
+
     }
     
 }
